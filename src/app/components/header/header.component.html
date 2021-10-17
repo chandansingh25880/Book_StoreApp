@@ -1,0 +1,31 @@
+
+<!-- HEADER -->
+<header class="header">
+    <div class="headerContent">
+       <img (click)="homepage()"class="bookImg" style="height: 24px;" src="../../../assets/education.svg">
+       <h2 class="bookText">BOOKSTORE</h2>
+       <div class="search">
+           <mat-icon mat-button>search</mat-icon>
+           <input class="searchInput" type="text" placeholder="Search">
+       </div>
+       <div class="rightSection">
+           <mat-icon [matMenuTriggerFor]="menu" class="headerButton">person</mat-icon>
+           <mat-menu class="profile" #menu="matMenu" xPosition="before">
+                <span> Hello chandan</span>
+                <div class="profileMenu">
+                    <h5>Profile</h5>
+                    <h5>My Orders</h5>
+                    <h5 (click)="getwishlist()" style="cursor: pointer">My Wishlist</h5>
+                </div>
+                <button class="button" mat-stroked-button>
+                    Log Out
+                </button>
+            </mat-menu>
+           <h5 style="margin: 0; color:#FCFCFC;">Profile</h5>
+       </div>
+       <div class="rightSection2">
+           <mat-icon  [matBadge]="badgeContent" matBadgeSize="small" class="headerButton" (click)="getCart()"> local_grocery_store</mat-icon>
+           <h5 style="margin: 0; color:#FCFCFC;">Cart</h5>
+       </div>
+    </div>
+</header>
