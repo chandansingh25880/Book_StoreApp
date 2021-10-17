@@ -17,7 +17,7 @@ export class WishlistComponent implements OnInit {
     this.token = localStorage.getItem('token')
     this.getwishlist();
   }
-
+  
   getwishlist(){
     this.bookService.getWishlist(this.token).subscribe((data:any)=>{
       this.wishlistBook=data['result']
