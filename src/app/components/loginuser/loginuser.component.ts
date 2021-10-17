@@ -19,7 +19,7 @@ export class LoginuserComponent implements OnInit {
     userName: new FormControl('', [Validators.required, Validators.email, Validators.minLength(3)]),
     password: new FormControl('', [Validators.required, Validators.minLength(3)])
   })
-
+  
   ngOnInit(): void {
   }
 
